@@ -35,17 +35,11 @@ An idle task (`idle_task`) is also included, which runs when no other tasks are 
 
 
 ## Scheduler and Context Switching
-
-
-
 The scheduler uses a PendSV (Pendable request for system service) interrupt to perform context switching between tasks. The scheduler is implemented in the `PendSV_Handler` function. Context switching is based on the execution states of the tasks (ready or blocked).
 
 
 
 ## System Tick Timer
-
-
-
 The system tick timer generates periodic interrupts, which are used to keep track of time and unblock tasks waiting for a specific delay. The SysTick interrupt is handled in the `SysTick_Handler` function.
 
 
@@ -56,29 +50,11 @@ The system tick timer generates periodic interrupts, which are used to keep trac
 
 To use this RTOS scheduler, you need to include the necessary files in your project and configure the GPIO pins according to your hardware setup. Make sure to initialize the stack pointers for each task using the `init_task_stack` function and specify the number of tasks using the `MAX_TASKS` constant.
 
-
-
-## Fault Handlers
-
-
-
-The project includes fault handlers (HardFault, BusFault, MemManage) to handle various fault conditions. When a fault occurs, the respective fault handler function will be executed.
-
-
-
-
-
 ## License
-
-
-
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 
 
 ## Contact
-
-
-
 For any inquiries or questions, please contact [Malefetsane Lenka](mailto:malefetsanelenka@gmail.com).
 
